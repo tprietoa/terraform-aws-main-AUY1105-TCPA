@@ -25,11 +25,13 @@ module "s3" {
   bucket_suffix = "pro-2026"
 } 
 
+
 # ---- EC2 ----
 module "ec2" {
-  source        = "git::https://github.com/tprietoa/terraform-aws-ec2-AUY1105-TCPA.git?ref=v0.1.0"
+  source            = "git::https://github.com/tprietoa/terraform-aws-ec2-AUY1105-TCPA.git?ref=v0.1.0"
   
-  subnet_id     = module.vpc.subnet_publica_1_id
-  vpc_id        = module.vpc.vpc_id
-  instance_name = "MiInstancia"
+  subnet_id         = module.vpc.subnet_publica_1_id 
+  vpc_id            = module.vpc.vpc_id
+  security_group_id = module.vpc.security_group_id   
+  instance_name     = "MiInstancia"
 }
