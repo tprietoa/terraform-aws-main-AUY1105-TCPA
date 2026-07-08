@@ -14,15 +14,15 @@ module "vpc" {
 
   vpc_cidr = var.vpc_cidr
   vpc_name = var.vpc_name
-  # Las demás variables comentadas que tenías...
+
 }
 
 # ---- S3 ----
 module "s3" {
   source = "git::https://github.com/tprietoa/terraform-aws-SE-AUY1105-TCPA.git?ref=v0.1.0"
 
-  bucket_prefix = "tp-proyecto"
-  bucket_suffix = "pro-2026"
+  bucket_prefix = var.s3_bucket_prefix
+  bucket_suffix = var.s3_bucket_suffix
 }
 
 
@@ -33,5 +33,5 @@ module "ec2" {
   subnet_id         = module.vpc.subnet_publica_1_id
   vpc_id            = module.vpc.vpc_id
   security_group_id = module.vpc.security_group_id
-  instance_name     = "MiInstancia"
+  instance_name     = var.ec2_instance_name
 }

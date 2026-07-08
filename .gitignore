@@ -1,8 +1,21 @@
-# Archivos de Terraform
+# Terraform
 .terraform/
 *.tfstate
 *.tfstate.*
+crash.log
+
+# Variables sensibles y Claves privadas
+*.tfvars
+*.tfvars.json
+*.pem
+*.env
+
+# Terraform lock
 .terraform.lock.hcl
 
-# Archivos de VS Code
+# VS Code
 .vscode/
+
+# OS / Sistema
+Thumbs.db
+.DS_Store
