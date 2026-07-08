@@ -1,4 +1,13 @@
 # Changelog
+
+## [1.0.1] - 2026-07-08
+### Fixed
+- Se actualiza la referencia del módulo EC2 a la versión parche `v1.0.1` para resolver el error de recursos duplicados de Terraform.
+
+## [1.0.0] - 2026-07-08
+### Fixed
+- Se actualiza la referencia del módulos v1.0.0
+
 ## [0.3.0] - 2026-07-08
 ### Added
 - Se parametrizan variables para EC2 y S3 logrando alta modularidad.
