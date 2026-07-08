@@ -21,3 +21,5 @@ Este repositorio cuenta con un flujo de integración continua mediante **GitHub 
 1. **Terraform Format Check:** Verifica que el código cumpla con los estándares de estilo (`terraform fmt`).
 2. **Terraform Validate:** Confirma que la sintaxis y las referencias entre los módulos sean correctas.
 3. **Checkov (Seguridad):** Analiza estáticamente la infraestructura en busca de brechas de seguridad y cumplimiento de buenas prácticas.
+
+
